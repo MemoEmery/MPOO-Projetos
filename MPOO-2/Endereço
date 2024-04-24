@@ -1,0 +1,11 @@
+class Endereco:
+    def __init__(self, rua, numero, cidade, estado, cep):
+        self._rua = rua
+        self._numero = numero
+        self._cidade = cidade
+        self._estado = estado
+        self._cep = cep
+
+    def formatar_endereco(self):
+        return f"{self._rua}, {self._numero} - {self._cidade}, {self._estado} - CEP: {self._cep}"
+

@@ -1,0 +1,31 @@
+class Pessoa:
+    def __init__(self, nome, matricula):
+        self._nome = nome
+        self._matricula = matricula
+
+
+class Professor(Pessoa):
+    def __init__(self, nome, matricula):
+        super().__init__(nome, matricula)
+        self._disciplinas = []
+
+    def adicionar_disciplina(self, disciplina):
+        self._disciplinas.append(disciplina)
+
+    def listar_disciplinas(self):
+        return [disciplina.nome for disciplina in self._disciplinas]
+
+
+class Aluno(Pessoa):
+    def __init__(self, nome, matricula, curso, endereco):
+        super().__init__(nome, matricula)
+        self._curso = curso
+        self._endereco = endereco
+        self._disciplinas = []
+
+    def matricular_em_disciplina(self, disciplina):
+        self._disciplinas.append(disciplina)
+        disciplina.adicionar_aluno(self)
+
+    def listar_disciplinas(self):
+        return [disciplina.nome for disciplina in self._disciplinas]

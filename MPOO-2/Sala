@@ -1,0 +1,7 @@
+class Sala:
+    def __init__(self, numero, capacidade):
+        self._numero = numero
+        self._capacidade = capacidade
+
+    def verificar_disponibilidade(self):
+        return "Disponível"

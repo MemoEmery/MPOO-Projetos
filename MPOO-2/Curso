@@ -1,0 +1,15 @@
+class Curso:
+    def __init__(self, nome, codigo):
+        self._nome = nome
+        self._codigo = codigo
+        self._disciplinas = []
+        self._alunos = []
+
+    def adicionar_disciplina(self, disciplina):
+        self._disciplinas.append(disciplina)
+
+    def adicionar_aluno(self, aluno):
+        self._alunos.append(aluno)
+
+    def listar_alunos(self):
+        return [aluno._nome for aluno in self._alunos]

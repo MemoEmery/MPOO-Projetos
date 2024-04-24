@@ -1,0 +1,13 @@
+class Disciplina:
+    def __init__(self, nome, codigo, professor, sala):
+        self._nome = nome
+        self._codigo = codigo
+        self._professor = professor
+        self._sala = sala
+        self._alunos = []
+
+    def adicionar_aluno(self, aluno):
+        self._alunos.append(aluno)
+
+    def remover_aluno(self, aluno):
+        self._alunos.remove(aluno)
